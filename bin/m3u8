@@ -1,2 +1,4 @@
-#!/usr/bin/env node
-require('../lib/m3u8')
+#!/bin/bash
+# caffeinate -i node $(dirname $0)/lib/m3u8.js
+caffeinate -i node $(dirname $(dirname $(readlink -n $0)))/lib/m3u8.js $*
+
